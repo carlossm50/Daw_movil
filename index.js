@@ -150,7 +150,10 @@ projects.connectDb((err) => {
         console.log("Could not connect with MongoDB");
         process.exit(1);
     }
-    users.connectDb((err) => {
+    app.listen(port, () => {
+            console.log("Server with GUI up and running!!");
+        });   
+    /*users.connectDb((err) => {
         if (err) {
             console.log("Could not connect with MongoDB");
             process.exit(1);
@@ -159,5 +162,5 @@ projects.connectDb((err) => {
             console.log("Server with GUI up and running!!");
         });   
         
-    });
+    });*/
 });

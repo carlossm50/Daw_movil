@@ -1,5 +1,5 @@
 {
-  "name": "l03",
+  "name": "aws1718-0",
   "version": "1.0.0",
   "description": "Aplicacion de aws",
   "main": "index.js",
@@ -9,8 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/carlossm50/aws18_projects.git",
-    "github": "https://github.com/carlossm50/aws18_projects"
+    "url": "git://github.com/carlossm50/aws1718-0.git",
+    "github": "https://github.com/carlossm50/aws1718-0"
   },
   "author": "",
   "license": "ISC",
