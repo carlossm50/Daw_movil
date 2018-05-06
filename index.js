@@ -15,7 +15,7 @@ var port = (process.env.PORT || 16778);
 var baseAPI = "/api/v1";
 
 var app = express();
-
+/*
 passport.use(new BasicStrategy(
     function(username, password, done) {
         users.findOne({ username: username }, function (err, user) {
@@ -26,7 +26,7 @@ passport.use(new BasicStrategy(
         });
     }
 ));
-
+*/
 /*passport.use(new LocalAPIKey(
     function(apikey, done) {
         users.findOne({ apikey: apikey }, function (err, user) {
