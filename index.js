@@ -7,7 +7,7 @@ var projects = require("./projects.js");
 
 var passport = require('passport');
 var BasicStrategy = require('passport-http').BasicStrategy;
-var LocalAPIKey = require('passport-localapikey').Strategy;
+//var LocalAPIKey = require('passport-localapikey').Strategy;
 
 var users  = require("./users.js");
 
@@ -27,7 +27,7 @@ passport.use(new BasicStrategy(
     }
 ));
 
-passport.use(new LocalAPIKey(
+/*passport.use(new LocalAPIKey(
     function(apikey, done) {
         users.findOne({ apikey: apikey }, function (err, user) {
           if (err) { return done(err); }
@@ -35,7 +35,7 @@ passport.use(new LocalAPIKey(
           return done(null, user);
         });
     }
-));
+));*/
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
@@ -43,7 +43,7 @@ app.use(passport.initialize());
 
  
 app.get(baseAPI + "/projects",
-passport.authenticate(['basic','localapikey'], {session:false}), 
+passport.authenticate('basic', {session:false}), 
 (request, response) => {
     console.log("GET /projects"); 
     
