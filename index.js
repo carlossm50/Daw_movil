@@ -1,10 +1,13 @@
 'use strict';
-/*
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require('path');
 var projects = require("./projects.js");
 
+var users  = require("./users.js");
+
+/*
 var passport = require('passport');
 var BasicStrategy = require('passport-http').BasicStrategy;
 var LocalAPIKey = require('passport-localapikey').Strategy;
@@ -41,12 +44,6 @@ passport.use(new BasicStrategy(
 //app.use(bodyParser.json());
 //app.use(passport.initialize());
 
-
-
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require('path');
-var projects = require("./projects.js");
 
 var port = (process.env.PORT || 16778);
 var baseAPI = "/api/v1";
@@ -169,7 +166,7 @@ projects.connectDb((err) => {
     app.listen(port, () => {
             console.log("Server with GUI up and running!!");
         });
-    /*users.connectDb((err) => {
+    users.connectDb((err) => {
         if (err) {
             console.log("Could not connect with MongoDB");
             process.exit(1);
@@ -178,5 +175,5 @@ projects.connectDb((err) => {
             console.log("Server with GUI up and running!!");
         });   
         
-    });*/
+    });
 });
