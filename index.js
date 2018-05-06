@@ -42,7 +42,9 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 
  
-app.get(baseAPI + "/projects", (request, response) => {
+app.get(baseAPI + "/projects",
+passport.authenticate(['basic','localapikey'], {session:false}), 
+(request, response) => {
     console.log("GET /projects"); 
     
     projects.allProjects((err,projects)=>{
