@@ -1,13 +1,13 @@
 'use strict';
-
+/*
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require('path');
 var projects = require("./projects.js");
 
-//var passport = require('passport');
-//var BasicStrategy = require('passport-http').BasicStrategy;
-//var LocalAPIKey = require('passport-localapikey').Strategy;
+var passport = require('passport');
+var BasicStrategy = require('passport-http').BasicStrategy;
+var LocalAPIKey = require('passport-localapikey').Strategy;
 
 var users  = require("./users.js");
 
@@ -15,7 +15,7 @@ var port = (process.env.PORT || 16778);
 var baseAPI = "/api/v1";
 
 var app = express();
-/*
+
 passport.use(new BasicStrategy(
     function(username, password, done) {
         users.findOne({ username: username }, function (err, user) {
@@ -41,6 +41,20 @@ passport.use(new BasicStrategy(
 //app.use(bodyParser.json());
 //app.use(passport.initialize());
 
+
+
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require('path');
+var projects = require("./projects.js");
+
+var port = (process.env.PORT || 16778);
+var baseAPI = "/api/v1";
+
+var app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json());
  
 app.get(baseAPI + "/projects",
 //passport.authenticate('basic', {session:false}), 
