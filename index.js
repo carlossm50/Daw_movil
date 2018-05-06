@@ -5,8 +5,8 @@ var bodyParser = require("body-parser");
 var path = require('path');
 var projects = require("./projects.js");
 
-var passport = require('passport');
-var BasicStrategy = require('passport-http').BasicStrategy;
+//var passport = require('passport');
+//var BasicStrategy = require('passport-http').BasicStrategy;
 //var LocalAPIKey = require('passport-localapikey').Strategy;
 
 var users  = require("./users.js");
@@ -37,13 +37,13 @@ passport.use(new BasicStrategy(
     }
 ));*/
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
-app.use(passport.initialize());
+//app.use(express.static(path.join(__dirname, 'public')));
+//app.use(bodyParser.json());
+//app.use(passport.initialize());
 
  
 app.get(baseAPI + "/projects",
-passport.authenticate('basic', {session:false}), 
+//passport.authenticate('basic', {session:false}), 
 (request, response) => {
     console.log("GET /projects"); 
     
