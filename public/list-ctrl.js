@@ -58,6 +58,7 @@ angular
 
         function refresh(){
             $http.get("/api/v1/projects").then(function (response){
+            //$http.get("https://aws1718-0.herokuapp.com/api/v1/projects?apikey=aws1718").then(function (response){    
                 $scope.projects = response.data;
             });
         }

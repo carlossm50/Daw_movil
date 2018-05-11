@@ -40,10 +40,7 @@ passport.use(new LocalAPIKey(
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(passport.initialize());
-<<<<<<< HEAD
 app.use(cors());
-=======
->>>>>>> 59b859bc6ae3dcefd55ef484d9f112aba69e723e
 
 app.get(baseAPI + "/projects",
 passport.authenticate(['basic','localapikey'], {session:false}), 
@@ -153,6 +150,7 @@ app.put(baseAPI  + "/projects", (request, response) => {
 projects.connectDb((err) => {
     if (err) {
         console.log("Could not connect with MongoDB");
+        console.log("1");
         process.exit(1);
     }
 
