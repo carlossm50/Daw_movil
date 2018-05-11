@@ -40,7 +40,7 @@ passport.use(new LocalAPIKey(
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(passport.initialize());
-app.use(cors());
+app.use(cors()); 
 
 app.get(baseAPI + "/projects",
 passport.authenticate(['basic','localapikey'], {session:false}), 

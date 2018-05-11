@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "aws1718-01",
-=======
   "name": "aws1718-0",
->>>>>>> 59b859bc6ae3dcefd55ef484d9f112aba69e723e
   "version": "1.0.0",
   "description": "Aplicacion de aws",
   "main": "index.js",
@@ -13,13 +9,8 @@
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
-    "url": "git://github.com/carlossm50/aws1718-01.git",
-    "github": "https://github.com/carlossm50/aws1718-01"
-=======
     "url": "git://github.com/carlossm50/aws1718-0.git",
     "github": "https://github.com/carlossm50/aws1718-0"
->>>>>>> 59b859bc6ae3dcefd55ef484d9f112aba69e723e
   },
   "author": "",
   "license": "ISC",
